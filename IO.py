@@ -16,7 +16,7 @@ class ProteinIO:
 
   @staticmethod
   def save_predictions(predictions):
-    np.savez('test_{}'.format(5), *predictions)
+    np.savez('test_{}.npz'.format(5), *predictions)
   
   @staticmethod
   def calculate_rmse(solutions_filename, predictions_filename):
