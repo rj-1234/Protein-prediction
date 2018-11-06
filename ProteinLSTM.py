@@ -22,7 +22,8 @@ class ProteinLSTM:
                   metrics=metrics)
   
   @staticmethod
-  def fit(model, train_input, train_output, validation_train, validation_test, batch_size=50, epochs=5):
+  def fit(model, train_input, train_output, validation_train, validation_test, 
+          batch_size=50, epochs=5):
     model.fit(train_input, 
               train_output, 
               batch_size=50, 

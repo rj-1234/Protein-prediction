@@ -1,7 +1,7 @@
 import pandas as pd 
 import numpy as np 
 
-class IO:
+class ProteinIO:
   @staticmethod
   def get_input(filename):
     return pd.read_csv(filename)
@@ -12,6 +12,7 @@ class IO:
     file = np.load(filename)
     for key in file:
       output.append(file[key])
+    return np.array(output)
 
   @staticmethod
   def save_predictions(predictions):
