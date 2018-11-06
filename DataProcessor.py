@@ -10,8 +10,8 @@ class DataProcessor:
 
   @staticmethod
   def tokenize(n_gram_text):
-    # returns both the number of words and the tokenized input data
+    # returns both the number of words, the tokenized input data, and the tokenizer
     encoder = Tokenizer()
     encoder.fit_on_texts(n_gram_text)
     input_data = encoder.texts_to_sequences(n_gram_text)
-    return len(encoder.word_index) + 1, sequence.pad_sequences(input_data, padding='post')
+    return len(encoder.word_index) + 1, sequence.pad_sequences(input_data, padding='post'), encoder
